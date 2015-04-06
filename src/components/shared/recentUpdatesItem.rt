@@ -1,0 +1,5 @@
+<div>
+    <p>{this.props.data.get('dateIssue')}</p>
+    <p>{this.props.data.get('title')}</p>
+    <p>{this.props.data.get('body')}</p>
+</div>

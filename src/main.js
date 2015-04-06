@@ -1,12 +1,16 @@
 requirejs.config({
-//    baseUrl: '/',
+    baseUrl: './',
     paths: {
-        lodash: '//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min',
-        react: '//fb.me/react-with-addons-0.12.2'
+        lodash: 'lib/lodash/lodash.min',
+        react: 'lib/react/react.min',
+        promise: 'lib/es6-promise/promise.min',
+        parse: '//www.parsecdn.com/js/parse-1.4.0.min'
     },
     shim: {
         lodash: {exports: '_'},
-        react: {exports: 'React'}
+        react: {exports: 'React'},
+        promise: {exports: 'Promise'},
+        parse: {exports: 'Parse'}
     },
     map: {
         '*': {
@@ -15,7 +19,7 @@ requirejs.config({
     }
 });
 
-requirejs(['react', './hello'], function (React, hello) {
+requirejs(['react', './app'], function (React, app) {
     'use strict';
-    React.render(React.createElement(hello), document.getElementById('container'));
+    React.render(React.createElement(app), document.getElementById('appContainer'));
 });

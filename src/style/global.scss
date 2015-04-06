@@ -1,3 +1,22 @@
-.test {
-  border: 2px;
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Alef:400,700&subset=latin,hebrew);
+
+$g-font1: 'Montserrat', sans-serif;
+$g-font2: 'Open Sans', sans-serif;
+$g-font3: 'Alef', sans-serif;
+
+body {
+  outline: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  box-sizing: border-box;
+  font-family: $g-font3;
+}
+
+p {
+  margin: 0;
 }

@@ -1,0 +1,6 @@
+<rt-require dependency="./playerHeader" as="playerHeader" />
+<rt-require dependency="../shared/recentUpdates" as="recentUpdates" />
+<div class="player player-home">
+    <playerHeader />
+    <recentUpdates items="{this.props.recentUpdates}" />
+</div>

@@ -15,6 +15,7 @@
     ],
     "dependencies": {
         "lodash": "~3.5.0",
-        "react": "~0.13.1"
+        "react": "~0.13.1",
+        "es6-promise": ""
     }
 }

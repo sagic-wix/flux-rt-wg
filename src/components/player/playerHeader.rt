@@ -1,0 +1,5 @@
+<rt-require dependency="../shared/gameClockDisplay" as="gameClockDisplay" />
+<div class="header">
+    <div>Player Info</div>
+    <gameClockDisplay />
+</div>

@@ -1,0 +1,12 @@
+<!--suppress CheckEmptyScriptTag -->
+<rt-require dependency="components/shared/login" as="login" />
+<rt-require dependency="components/player/playerHome" as="playerHome" />
+<div>
+    <login rt-if="this.state.currentPage === this.PAGES.LOGIN" onSuccessCallback="{this.onLoginSuccess}" />
+    <playerHome
+        rt-if="this.state.currentPage === this.PAGES.PLAYER_HOME"
+        recentUpdates="{this.state.pressArticles}"
+        />
+    <span rt-if="this.state.currentPage === this.PAGES.DIRECTOR_HOME">Director Home</span>
+    <span rt-if="this.state.currentPage === this.PAGES.PRESS_HOME">Press Home</span>
+</div>

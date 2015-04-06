@@ -1,0 +1,14 @@
+<div class="login-form">
+    <img src="http://www.pixentral.com/pics/1A2fMA1TzhR2QtSPBE7jHWv9k.png" alt="lock"/>
+    <h3>כניסה למערכת</h3>
+    <form>
+        <span rt-if="this.state.errorMessage" ref="error" class="error-message">{this.state.errorMessage}</span>
+        <input ref="usernameInp" type="text" placeholder="שם משתמש" />
+        <input ref="passwordInp" type="password" placeholder="סיסמא" />
+    </form>
+    <a href="#">שכחת סיסמא?</a>
+    <input type="submit" value="כניסה" onClick="{this.onLoginSubmit}"/>
+    <div class="signup">
+        <p><a href="#">הרשמה למערכת</a></p>
+    </div>
+</div>

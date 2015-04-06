@@ -26,9 +26,22 @@ module.exports = function (grunt) {
                 files: [
                     'src/**/*.rt',
                     'src/**/*.html',
+                    'src/**/*.js',
                     'src/**/*.scss'
                 ],
                 tasks: ['all'],
+                options: {
+                    spawn: false
+                }
+            },
+            'all-nolint': {
+                files: [
+                    'src/**/*.rt',
+                    'src/**/*.html',
+                    'src/**/*.js',
+                    'src/**/*.scss'
+                ],
+                tasks: ['all-nolint'],
                 options: {
                     spawn: false
                 }
@@ -86,7 +99,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-eslint');
 
     grunt.registerTask('rt', ['react-templates']);
-    grunt.registerTask('default', ['eslint', 'rt', 'sass', 'copy']);
+    grunt.registerTask('default', ['rt', 'sass', 'copy', 'eslint']);
+    grunt.registerTask('all-nolint', ['rt', 'sass', 'copy']);
     grunt.registerTask('test', []);
 
     grunt.registerTask('all', ['default', 'test']);

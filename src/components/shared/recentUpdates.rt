@@ -1,0 +1,9 @@
+<rt-require dependency="./recentUpdatesItem" as="recentUpdatesItem" />
+<div class="recent-updates-panel">
+    <h2>Recent Updates</h2>
+    <ul>
+        <li rt-repeat="item in this.props.items">
+            <recentUpdatesItem data="{item}" />
+        </li>
+    </ul>
+</div>
