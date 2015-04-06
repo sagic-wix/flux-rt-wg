@@ -17,3 +17,7 @@ npm-debug.log
 /bower_components/*
 
 *.rt.js
+.target
+.sass-cache
+/cssCache
+/.cache
