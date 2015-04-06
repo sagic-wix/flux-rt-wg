@@ -8,14 +8,16 @@ module.exports = function (grunt) {
     grunt.initConfig({
         clean: {
             main: {
-                src: ['src/**/*.rt.js']
+                src: ['src/**/*.rt.js', 'target/**/*.*']
             }
         },
         eslint: {
             all: {
                 src: [
                     'src/**/*.js',
-                    '!src/**/*.rt.js'
+                    '!src/**/*.rt.js',
+                    '!src/**/*.min.js',
+                    '!src/lib/**/*.*'
                 ]
             }
         },
@@ -23,6 +25,7 @@ module.exports = function (grunt) {
             all: {
                 files: [
                     'src/**/*.rt',
+                    'src/**/*.html',
                     'src/**/*.scss'
                 ],
                 tasks: ['all'],
